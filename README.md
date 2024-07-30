@@ -1,2 +1,2 @@
-# votacion
+# Votacion
 PRUEBA DE DIAGNOSTICO
