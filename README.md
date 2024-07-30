@@ -33,6 +33,7 @@ Este proyecto es un sistema de votación para las elecciones presidenciales de P
 
 - Abrir el archivo db.php para modificar la conexión a sus datos de preferencia.
 - Configura las credenciales de conexión a la base de datos:
+  ```
     <?php
     $server = "127.0.0.1"; #Puerto
     $user = "root"; #Usuario de la base de datos
