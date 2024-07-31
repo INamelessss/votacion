@@ -38,6 +38,8 @@ $(document).ready(function () {
 
 function votar() {
   var form = $(votacionForm);
+  var dni = $("#dni").val();
+  var dniFormato = /^\d{8}-\d{1}$/;
   var datosForm = form.serializeArray();
   var mediosSeleccionados = form.find('input[name="medio[]"]:checked').length;
   var provincia = $("#provincia").val();
@@ -45,6 +47,10 @@ function votar() {
   var candidato = $("#candidato").val();
 
   var validaciones = [
+    {
+      message: "El DNI debe tener el formato ########-# (Ej: 71838371-0).",
+      condition: !dniFormato.test(dni),
+    },
     {
       message:
         "Al menos debe seleccionar dos opciones de como se enteró sobre nosotros. Reintentar",

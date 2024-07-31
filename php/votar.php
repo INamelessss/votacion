@@ -1,10 +1,6 @@
 <?php
 include 'db.php';
 
-function validarDNI($dni)
-{
-    return preg_match('/^[0-9]{8}$/', $dni);
-}
 
 $nombre = $_POST['nombre'];
 $alias = $_POST['alias'];
@@ -22,7 +18,6 @@ $validaciones = [
     'El alias debe contener más de 5 caracteres.' => strlen($alias) <= 5,
     'El alias debe contener al menos una letra.' => !preg_match('/[a-zA-Z]/', $alias),
     'El alias debe contener al menos un número.' => !preg_match('/[0-9]/', $alias),
-    'El DNI no es válido. Debe contener 8 dígitos.' => !validarDNI($dni),
     'El correo electrónico no es válido.' => !filter_var($email, FILTER_VALIDATE_EMAIL),
 ];
 
