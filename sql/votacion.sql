@@ -329,7 +329,7 @@ CREATE TABLE `votos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `alias` varchar(100) NOT NULL,
-  `dni` varchar(8) NOT NULL,
+  `dni` varchar(10) NOT NULL,
   `email` varchar(100) NOT NULL,
   `medio` varchar(255) NOT NULL,
   `provincia_id` int(11) NOT NULL,
